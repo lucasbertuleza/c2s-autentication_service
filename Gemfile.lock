@@ -154,6 +154,8 @@ GEM
       reline (>= 0.4.2)
     jaro_winkler (1.6.0)
     json (2.7.5)
+    jwt (2.9.3)
+      base64
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -380,6 +382,7 @@ DEPENDENCIES
   database_cleaner-active_record
   debug
   factory_bot_rails
+  jwt
   mysql2
   pry-rails
   puma
@@ -406,4 +409,4 @@ RUBY VERSION
    ruby 3.2.6p234
 
 BUNDLED WITH
-   2.5.22
+   2.4.19
