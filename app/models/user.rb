@@ -4,6 +4,6 @@ class User < ApplicationRecord
   has_secure_password
 
   def as_json
-    super.except("password_digest")
+    super.except("id", "password_digest")
   end
 end
