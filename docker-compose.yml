@@ -18,6 +18,9 @@ services:
       - database
     stdin_open: true
     tty: true
+    networks:
+      - net
+      - main_app_net
 
   database:
     image: mysql:9.1.0
@@ -30,7 +33,14 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=${DATABASE_PASSWORD}
     mem_limit: 512m
+    networks:
+      - net
 
 volumes:
   bundle_cache:
   mysql_data:
+
+networks:
+  net:
+  main_app_net:
+    external: true
