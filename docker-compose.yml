@@ -20,7 +20,6 @@ services:
     tty: true
     networks:
       - net
-      - main_app_net
 
   database:
     image: mysql:9.1.0
@@ -42,5 +41,3 @@ volumes:
 
 networks:
   net:
-  main_app_net:
-    external: true
